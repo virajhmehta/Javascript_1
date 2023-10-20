@@ -20,3 +20,24 @@ const myFun = function()
 }
 console.log(typeof myFun);
 
+// ************************ Memory ************************
+
+// Stack(Primitive)->will get copy of var, Heap(Non-primitive)->will get ref | used with this datatypes
+let myYoutubename = "Hello"
+
+let anotherName = myYoutubename;
+anotherName = "chaiaurcode" 
+
+console.log(anotherName); // chaiaurcode
+console.log(myYoutubename); // Hello 
+// in above we got the copy
+
+let user = {
+    email : "hello@gmail.com",
+    upi : "user@ybl",
+}
+
+let temp = user;
+temp.email = "temp@gmail.com";
+
+console.log(user.email); // temp@gmail.com // used ref for original value
