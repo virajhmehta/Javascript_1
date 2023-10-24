@@ -14,3 +14,4 @@
 console.log(typeof "Viraj");
 console.log(typeof null); // type is object
 console.log(typeof undefined) // type is undefined 
+
