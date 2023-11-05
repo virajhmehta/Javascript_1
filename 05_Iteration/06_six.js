@@ -15,3 +15,6 @@ const val1 = myNums.filter((num) => {
 console.log(val);
 console.log(val1);
 
+const ans = myNums.filter((num) => {
+  return num > 4;
+});

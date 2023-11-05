@@ -9,14 +9,14 @@
     
 </body>
 <script>
-    const div = document.createElement('h1')
+    const div = document.createElement('h1') //1:17:48
     console.log(div);
     div.className = "main"
     div.id = Math.round(Math.random() * 10 +1)
     div.setAttribute("title", "generated Title")
     div.style.backgroundColor = "green"
     div.style.paddingBlockEnd = "12px"
-    // div.innerText = "Chai Aur Code"
+    // div.innerText = "Chai Aur Code" for line 19,20,21 1:19:25 line 19 == line 20 and 21
     const addText = document.createTextNode("chai aur Code") 
     div.appendChild(addText)
     document.body.appendChild(div)
