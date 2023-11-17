@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <!-- <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick= "alert('owl')"></li> -->
+            <!-- some will add the comments like this but this is not correct approch  -->
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // mostly js events generally run in sequentially but there are some exception
+    // document.getElementById('owl').onclick = function() {
+    //     alert('Owl click') // this also not good approch we should use eventListner
+    // }
+    // addEventListener can use mouse drag many events like this
+    // addEventListener('eventName', func(){}, false) here default is false 
+    // attachEvent() --> prev used 
+
+    // type, timestamp, defaultPrevented --> default actions
+    // target, toElement, srcElement, currentTarget,
+    // clientX, ClientY, screenX, screenY
+    // altkey, ctrlkeym, shiftkey, keyCode
+
+    // event propagation--> JavaScript event propagation is the mechanism by which events are triggered and handled in a web browser.
+    // It is a way to describe the “stack” of events that are fired in a web browser. 
+    // it is having 2 contex --> event bubbling and event capturing
+    
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("Cliked inside the ul"); // clicked for the ul
+
+    }, false)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log('owl clicked'); // for specfic owl
+        // e.stopPropogation() // so event will not bubble and only owl clicked gets displayed 
+        //console.log(e); // in console many events will be displayed 
+
+    }, false) 
+
+    // for above 2 result is : owl clicked {inNewLine} Cliked inside the ul
+    // due to --> When an event is triggered on an element, it is propagated up the DOM tree to the parent elements, 
+    // and then down the DOM tree to the child elements. This process is known as bubbling.
+    // if we use true then it will be event capture i.e top down and the result will be reversed
+    
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault()
+        // The preventDefault() method of the Event interface tells the user agent that if the event does not get explicitly handled, 
+        // its default action should not be taken as it normally would be.
+        e.stopPropagation()
+        console.log("Google clicked");
+    }, false)
+    // remove all image we clik
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        
+
+        // removeIt.remove() // but for google it will remove everything
+        // removeIt.parentNode.removeChild(removeIt) // another way for line 69
+    }, false)
+
+    
+</script>
+</html>
