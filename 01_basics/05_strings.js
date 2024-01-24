@@ -19,7 +19,7 @@ const temp = new String('hello-world');
 const newString = temp.substring(0, 4) // [)
 console.log(newString); // hell
 
-const anotherString = temp.slice(-8, 4);
+const anotherString = temp.slice(-8, 4);// will start from reverse ( start index, end index ) so -8 is given so it starts from end and 4 is from start so -8 is 'l' and 4 is 'o' so it is [) so prints 'l'
 console.log(anotherString); // l
 
 const newStringOne = " Viraj "

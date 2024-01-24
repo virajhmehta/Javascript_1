@@ -6,3 +6,7 @@ const num = myNums
   .map((num) => num + 1 )// this num will be reult after *10 => num + 1
   .filter((num) => num > 40)
 console.log(num);
+
+
+const val = myNums.map((num) => num + 1).map((val1) => val1 + 1)
+console.log(val);

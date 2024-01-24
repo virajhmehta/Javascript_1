@@ -14,7 +14,7 @@ for (const str of greetings) {
 
 // Maps
 const map = new Map()
-// search on wen map js mdn
+// search on web map js mdn
 map.set('ind', 'india')
 map.set('USA', 'united state of america')
 map.set('fr', 'france')

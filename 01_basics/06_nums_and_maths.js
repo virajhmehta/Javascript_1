@@ -1,6 +1,6 @@
 const score = 400
 const bal = new Number(1000);
-console.log(`${bal} and ${typeof bal}`); // 1000 and object
+console.log(`${bal} and ${typeof bal}`); // 1000 and object // it creates the number object
 console.log(bal.toString().length);
 console.log(bal.toFixed(2)); // 1000.00 to get decimal value
 console.log(`${bal} and ${typeof bal}`);

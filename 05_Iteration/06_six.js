@@ -18,3 +18,4 @@ console.log(val1);
 const ans = myNums.filter((num) => {
   return num > 4;
 });
+console.log(ans);

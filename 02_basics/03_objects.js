@@ -8,7 +8,7 @@ const jsUser = {
   age: 24,
   // mySym: "mykey1", // cosole.log(type of mySym) will give string
   [mySym]: "mykey1",
-  fullname: "Viraj Mehta", // have to compulsary access like console.log(jsUser["email"])
+  "fullname": "Viraj Mehta", // have to compulsary access like console.log(jsUser["email"])
   location: "Bengaluru",
   email: "virajmehta2499@gmail.com",
   isLoggedIn: false,
@@ -16,7 +16,7 @@ const jsUser = {
 };
 console.log(jsUser.email); //
 // one more way
-console.log(jsUser["email"]);
+console.log(jsUser["email"]); // type is string
 //console.log(jsUser.fullname); // wrong
 console.log(jsUser["fullname"]);
 console.log(typeof mySym); // symbol // line 9,10

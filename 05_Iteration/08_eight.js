@@ -3,7 +3,7 @@ const arr = [1, 2, 3, 4];
 const ans = arr.reduce((acc, curr) => {
   console.log(`${acc} ${curr}`);
   return acc + curr;
-}, 0); // 0 is starting value
+}, 0); // 0 is starting value // intial value goes to acc // 2nd time acc will take first iteration result
 console.log(ans);
 const obj = [
   {
@@ -24,6 +24,7 @@ const obj = [
   },
 ];
 const anns = obj.reduce((acc, value) => {
+  console.log(`${acc} ${value.price}`);
   return acc + value.price;
 }, 0);
 console.log(anns);

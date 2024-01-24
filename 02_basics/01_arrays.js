@@ -24,7 +24,7 @@ console.log(arr.indexOf(9)); // -1
 
 const newArr = arr.join();
 console.log(arr);
-console.log(newArr);
+console.log(newArr); // we are concating arr to an string newArr -> 1,2,3,4
 console.log(typeof newArr); // string
 
 

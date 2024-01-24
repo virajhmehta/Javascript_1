@@ -5,6 +5,11 @@
   console.log(`DB Connected`);
 })(); // last () used for execution
 
+
+(function hello()
+{
+  console.log("My name is Viraj");
+})();
 // sometime we get issue from global scope pollution so to remove that we used iife and to invoke immediately as well
 ((name) => {
   console.log(`DB Connected Two ${name}`);

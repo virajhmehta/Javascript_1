@@ -1,4 +1,4 @@
-// primitive datatype -> 7 type
+// primitive datatype -> 7 type call by value
 // String Number boolean null undefined Symbol(to make value unique) BigInt
 
 const score = 100

@@ -7,8 +7,8 @@ if (true) {
   var c = 30;
 }
 
-// console.log(a); // a is not defined 
-// console.log(b); // b is not defined 
+// console.log(a); // a is not defined // for if block
+// console.log(b); // b is not defined // for if block
 console.log(c); // 30 // will overrite
 
 
@@ -41,15 +41,16 @@ if(true)
 // *************** intresting ***************
 
 console.log(addone(5)) // 6
-
+// addone(5) // we can also write like this
 function addone(num)
 {
     return num + 1
 }
 
 
-//addTwo(5) // but this will give error // can't access before intialization
-const addTwo = function(num)
+//addTwo(5) // but this will give error when we declare like expression in detail we will have hoisitng
+// can't access before intialization
+const addTwo = function(num) // this kind of declaration is also called as expression
 {
     return num + 2;
 }
