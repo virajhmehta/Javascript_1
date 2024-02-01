@@ -7,7 +7,7 @@ console.log(myArr[0]); // 0
 
 const myHeros = ["Viraj", "Dhoni"]
 const arr = new Array( 1, 2, 3, 4);
-
+// console.log(typeof arr) -> object
 // Array Methods
 arr.push(6);
 console.log(arr); // [ 1, 2, 3, 4, 6 ]

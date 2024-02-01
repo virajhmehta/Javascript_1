@@ -4,11 +4,11 @@ const promiseOne = new Promise(function (resolve, reject) {
   // DB calls, cryptography, network
 
   setTimeout(function () {
-    console.log("Async task is completet");
+    console.log("Async task is complete");
     resolve();
   }, 1000);
 });
-promiseOne.then(function () {
+promiseOne.then(function () { // any response is there it will be in the .then // if any error in it goes to .catch
   console.log("Promise consumed");
 });
 

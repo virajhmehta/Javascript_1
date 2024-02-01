@@ -27,4 +27,9 @@ const anns = obj.reduce((acc, value) => {
   console.log(`${acc} ${value.price}`);
   return acc + value.price;
 }, 0);
+// 0 100
+// 100 200
+// 300 300
+// 600 400
 console.log(anns);
+// 1000

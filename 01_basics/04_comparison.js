@@ -11,5 +11,6 @@ console.log(null == 0); // false
 
 
 // === value and datatype will get checked
+// == only value will get checked 
 
 console.log("2" === 2); // false
